@@ -2,12 +2,17 @@
 
 A comprehensive, production-ready hospital management system built with the MERN stack (MongoDB, Express.js, React, Node.js). This full-stack application provides complete management capabilities for hospitals, doctors, patients, and appointments with a modern, responsive UI.
 
+## 🚀 Live Demo
+
+**[View Live Application →](https://medqueuehospital.vercel.app/)**
+
 ![React](https://img.shields.io/badge/React-18.3.1-blue?logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-22.x-green?logo=node.js)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
 ![Vite](https://img.shields.io/badge/Vite-5.4.2-purple?logo=vite)
 ![Express](https://img.shields.io/badge/Express-4.18.2-lightgrey?logo=express)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.10-blue?logo=tailwindcss)
+![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
 
 ## 📋 Table of Contents
 
