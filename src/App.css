@@ -1,0 +1,104 @@
+.book-container {
+    perspective: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjusted to fit better */
+    width: 100%; /* Full width to give space for flipping */
+    margin: 0 auto;
+    overflow: hidden; /* Hide any overflow from rotations */
+  }
+  
+  .book {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease-in-out; /* Smooth transition for flipping */
+  }
+  
+  .cover, .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    backface-visibility: hidden;
+    border: 2px solid #ccc;
+    transition: transform 1s cubic-bezier(0.6, 0.04, 0.98, 0.335); /* Custom easing for more realistic flip */
+  }
+  
+  .front-cover {
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .back-cover {
+    background-color: #2ecc71;
+    transform: rotateY(180deg);
+  }
+  
+  .page {
+    padding: 20px;
+    box-sizing: border-box;
+    transform: rotateY(180deg); /* Initially set all pages to rotateY to "hide" them */
+  }
+  
+  /* Page-specific backgrounds */
+  .page1 { background-color: #f1c40f; }
+  .page2 { background-color: #e74c3c; }
+  .page3 { background-color: #8e44ad; }
+  .page4 { background-color: #2ecc71; }
+  .page5 { background-color: #3498db; }
+  .page6 { background-color: #1abc9c; }
+  .page7 { background-color: #d35400; }
+  .page8 { background-color: #7f8c8d; }
+  .page9 { background-color: #bdc3c7; }
+  
+  /* Dynamic page turn animation based on current page */
+  .page-0 .page1,
+  .page-1 .page2,
+  .page-2 .page3,
+  .page-3 .page4,
+  .page-4 .page5,
+  .page-5 .page6,
+  .page-6 .page7,
+  .page-7 .page8,
+  .page-8 .page9 {
+    transform: rotateY(0deg); /* Page is revealed */
+  }
+  
+  .page-0 .front-cover,
+  .page-1 .front-cover,
+  .page-2 .front-cover,
+  .page-3 .front-cover,
+  .page-4 .front-cover,
+  .page-5 .front-cover,
+  .page-6 .front-cover,
+  .page-7 .front-cover,
+  .page-8 .front-cover {
+    transform: rotateY(180deg); /* Cover rotates away */
+  }
+  
+  .page-0 .back-cover,
+  .page-1 .back-cover,
+  .page-2 .back-cover,
+  .page-3 .back-cover,
+  .page-4 .back-cover,
+  .page-5 .back-cover,
+  .page-6 .back-cover,
+  .page-7 .back-cover,
+  .page-8 .back-cover {
+    transform: rotateY(180deg); /* Back cover stays hidden */
+  }
+  
+  /* Optional: Add 3D depth with box shadow for more realistic flip */
+  .page,
+  .cover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
